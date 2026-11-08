@@ -1,0 +1,20 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm start
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: craftops
+      POSTGRES_USER: craftops
+      POSTGRES_PASSWORD: craftops
+    ports:
+      - "5432:5432"

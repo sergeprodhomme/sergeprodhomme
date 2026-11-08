@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CraftOps</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header id="projectHeader">
+        <h1 id="projectName">CraftOps</h1>
+        <p id="projectSummary">Project overview loading...</p>
+      </header>
+
+      <section id="totalsGrid"></section>
+
+      <section class="section-grid">
+        <div class="panel card">
+          <h2>Add user story</h2>
+          <form id="storyForm">
+            <label>
+              Title
+              <input type="text" name="title" required placeholder="New user story" />
+            </label>
+            <label>
+              Status
+              <select name="status">
+                <option>Planned</option>
+                <option>In progress</option>
+                <option>Ready</option>
+              </select>
+            </label>
+            <label>
+              Priority
+              <select name="priority">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </label>
+            <label>
+              Description
+              <textarea name="description" placeholder="Describe the user story..."></textarea>
+            </label>
+            <button type="submit">Add story</button>
+          </form>
+        </div>
+
+        <div class="panel card">
+          <h2>Add BDD scenario</h2>
+          <form id="scenarioForm">
+            <label>
+              Story ID
+              <input type="text" name="storyId" placeholder="ST-101" />
+            </label>
+            <label>
+              Scenario title
+              <input type="text" name="title" required placeholder="User creates a project" />
+            </label>
+            <label>
+              Given
+              <textarea name="given" required placeholder="Given the team is authenticated..."></textarea>
+            </label>
+            <label>
+              When
+              <textarea name="when" required placeholder="When they create a new project..."></textarea>
+            </label>
+            <label>
+              Then
+              <textarea name="then" required placeholder="Then the project appears in the dashboard..."></textarea>
+            </label>
+            <button type="submit">Add scenario</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-grid">
+        <div class="panel card">
+          <h2>User stories</h2>
+          <div id="storyList"></div>
+        </div>
+
+        <div class="panel card">
+          <h2>BDD scenarios</h2>
+          <div id="scenarioList"></div>
+        </div>
+      </section>
+
+      <section class="section-grid">
+        <div class="panel card">
+          <h2>Add TDD test</h2>
+          <form id="testForm">
+            <label>
+              Story ID
+              <input type="text" name="storyId" placeholder="ST-101" />
+            </label>
+            <label>
+              Test name
+              <input type="text" name="name" required placeholder="Project creation test" />
+            </label>
+            <label>
+              Status
+              <select name="status">
+                <option>Passed</option>
+                <option>In progress</option>
+                <option>Planned</option>
+              </select>
+            </label>
+            <label>
+              Owner
+              <input type="text" name="owner" required placeholder="QA" />
+            </label>
+            <button type="submit">Add test</button>
+          </form>
+        </div>
+
+        <div class="panel card">
+          <h2>Test-driven development</h2>
+          <div id="testList"></div>
+        </div>
+      </section>
+
+      <section class="section-grid">
+        <div class="panel card">
+          <h2>Docker / DevOps</h2>
+          <div id="containerList"></div>
+        </div>
+
+        <div class="panel card">
+          <h2>Cybersecurity</h2>
+          <form id="securityForm">
+            <label>
+              Target
+              <input type="text" name="target" required placeholder="api" />
+            </label>
+            <label>
+              Severity
+              <select name="severity">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </label>
+            <label>
+              Status
+              <select name="status">
+                <option>Open</option>
+                <option>Closed</option>
+              </select>
+            </label>
+            <label>
+              Finding
+              <textarea name="finding" required placeholder="Describe the issue to investigate..."></textarea>
+            </label>
+            <button type="submit">Add finding</button>
+          </form>
+          <div id="securityList"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
